@@ -1,5 +1,11 @@
 # kickstart.nvim
 
+### My config
+
+#### Solarized themes using Lua
+
+https://github.com/search?l=Lua&o=desc&q=solarized&s=stars&type=Repositories
+
 ### Introduction
 
 A starting point for Neovim that is:
