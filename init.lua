@@ -450,6 +450,23 @@ mason_lspconfig.setup_handlers {
   end,
 }
 
+-- Dart Language Server Setup
+-- see:
+-- https://github.com/dart-lang/sdk/blob/master/pkg/analysis_server/tool/lsp_spec/README.md
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#dartls
+-- check other lsp options https://github.com/Dart-Code/Dart-Code/blob/master/package.json
+-- https://github.com/hrsh7th/nvim-compe#how-to-use-lsp-snippet
+-- it looks like capabilities.textDocument.completion.completionItem.snippetSupport is already true
+require("lspconfig").dartls.setup {
+	settings = {
+		dart = {
+			documentation = "full",
+		},
+	},
+	capabilities = capabilities,
+  on_attach = on_attach,
+}
+
 -- nvim-cmp setup
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
