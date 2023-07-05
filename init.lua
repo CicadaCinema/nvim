@@ -133,12 +133,11 @@ require('lazy').setup({
     -- Theme inspired by Atom
     -- 'navarasu/onedark.nvim',
 
-    -- Solarized Theme
-    'ishan9299/nvim-solarized-lua',
+    'CicadaCinema/shirotelin',
 
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'solarized'
+      vim.cmd.colorscheme 'shirotelin'
     end,
   },
 
@@ -149,7 +148,8 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'solarized_light',
+        -- theme = 'solarized_light',
+        theme = 'dracula',
         component_separators = '|',
         section_separators = '',
       },
