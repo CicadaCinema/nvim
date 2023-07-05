@@ -221,6 +221,9 @@ vim.o.hlsearch = false
 -- Make line numbers default
 vim.wo.number = true
 
+-- Use relative line numbers
+vim.opt.relativenumber = true
+
 -- Disable mouse mode
 vim.o.mouse = ''
 
@@ -238,6 +241,9 @@ vim.o.undofile = true
 -- Case insensitive searching UNLESS /C or capital in search
 vim.o.ignorecase = true
 vim.o.smartcase = true
+
+-- At least 8 lines of buffer below and above the cursor.
+vim.opt.scrolloff = 8
 
 -- Keep signcolumn on by default
 vim.wo.signcolumn = 'yes'
