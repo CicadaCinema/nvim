@@ -292,11 +292,19 @@ vim.api.nvim_create_autocmd('WinEnter', {
 })
 vim.api.nvim_create_autocmd('WinEnter', {
   group = bghighlight_group,
+  command = "set relativenumber",
+})
+vim.api.nvim_create_autocmd('WinEnter', {
+  group = bghighlight_group,
   command = "set signcolumn=yes",
 })
 vim.api.nvim_create_autocmd('WinLeave', {
   group = bghighlight_group,
   command = "set nonumber",
+})
+vim.api.nvim_create_autocmd('WinLeave', {
+  group = bghighlight_group,
+  command = "set norelativenumber",
 })
 vim.api.nvim_create_autocmd('WinLeave', {
   group = bghighlight_group,
