@@ -206,6 +206,10 @@ require('lazy').setup({
   { import = 'custom.plugins' },
 }, {})
 
+-- [[ Importing modules ]]
+require('autocmds')
+require('options')
+
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
