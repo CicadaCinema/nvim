@@ -310,7 +310,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'vimdoc', 'vim' },
+  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'vimdoc', 'vim', 'dart' },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = false,
@@ -470,6 +470,21 @@ mason_lspconfig.setup_handlers {
       filetypes = (servers[server_name] or {}).filetypes,
     }
   end
+}
+
+-- Dart Language Server Setup
+-- see:
+-- https://github.com/dart-lang/sdk/blob/master/pkg/analysis_server/tool/lsp_spec/README.md
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#dartls
+-- check other lsp options https://github.com/Dart-Code/Dart-Code/blob/master/package.json
+-- https://github.com/hrsh7th/nvim-compe#how-to-use-lsp-snippet
+-- it looks like capabilities.textDocument.completion.completionItem.snippetSupport is already true
+require("lspconfig").dartls.setup {
+	settings = {
+		dart = {},
+	},
+	capabilities = capabilities,
+  on_attach = on_attach,
 }
 
 -- [[ Configure nvim-cmp ]]
