@@ -189,6 +189,8 @@ require('lazy').setup({
       'nvim-treesitter/nvim-treesitter-textobjects',
     },
     build = ':TSUpdate',
+    -- https://github.com/nvim-treesitter/nvim-treesitter/issues/4945
+    commit = '33eb472b459f1d2bf49e16154726743ab3ca1c6d',
   },
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
