@@ -72,6 +72,21 @@ return {
           disconnect = '⏏',
         },
       },
+      layouts = { {
+        elements = { {
+          id = "scopes",
+          size = 1.0,
+        } },
+        position = "right",
+        size = 80
+      }, {
+        elements = { {
+          id = "repl",
+          size = 1.0,
+        }, },
+        position = "bottom",
+        size = 10
+      } },
     }
 
     -- Toggle to see last session result. Without this, you can't see session output in case of unhandled exception.
