@@ -382,7 +382,7 @@ vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = 
 vim.defer_fn(function()
   require('nvim-treesitter.configs').setup {
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash' },
+    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'dart' },
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = false,
@@ -553,6 +553,22 @@ mason_lspconfig.setup_handlers {
       filetypes = (servers[server_name] or {}).filetypes,
     }
   end,
+}
+
+-- Dart Language Server Setup
+-- see:
+-- https://github.com/dart-lang/sdk/blob/master/pkg/analysis_server/tool/lsp_spec/README.md
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#dartls
+-- check other lsp options https://github.com/Dart-Code/Dart-Code/blob/master/package.json
+require("lspconfig").dartls.setup {
+  settings = {
+    dart = {
+      -- Example:
+      -- documentation = 'full',
+    },
+  },
+  capabilities = capabilities,
+  on_attach = on_attach,
 }
 
 -- [[ Configure nvim-cmp ]]
