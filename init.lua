@@ -153,11 +153,11 @@ require('lazy').setup({
   },
 
   {
-    -- My fork of the shirotelin theme
-    'CicadaCinema/shirotelin',
+    -- Theme inspired by Atom
+    'navarasu/onedark.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'shirotelin'
+      vim.cmd.colorscheme 'onedark'
     end,
   },
 
